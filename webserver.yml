@@ -1,0 +1,20 @@
+- hosts: all
+  tasks:
+    - name: "Install web server"
+      package:
+        name: apache2
+        state: present
+    - name: "Copy file"
+      copy:
+        src: "/home/sourav/index.html"
+        dest: "/var/www/html"
+    - name: "Service"
+      service: 
+        name: apache2
+        state: started 
+
+
+        
+
+
+
