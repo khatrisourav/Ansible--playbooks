@@ -1,0 +1,10 @@
+---
+# DOCKER PLAYBOOK
+
+- name: Setup Docker on Ubuntu Server 22.04
+  hosts: localhost
+  become: true
+  roles:
+    - docker
+
+
