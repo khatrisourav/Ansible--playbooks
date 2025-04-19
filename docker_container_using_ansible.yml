@@ -1,0 +1,13 @@
+
+- name: Create a Docker container
+  hosts: localhost
+  become: true
+  tasks:
+   - name: "Creating a container using ansible"
+     community.docker.docker_container:
+          name: ansible_using_container
+          image: sam123s/myweb:v1
+          state: started
+          restart_policy: always
+          ports:
+            - "8080:80"
